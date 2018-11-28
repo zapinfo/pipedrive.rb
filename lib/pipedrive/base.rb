@@ -70,9 +70,9 @@ module Pipedrive
     class << self
       def faraday_options
         {
-          url:     'https://api.pipedrive.com',
+          url: 'https://api.pipedrive.com',
           headers: {
-            accept:     'application/json',
+            accept: 'application/json',
             user_agent: ::Pipedrive.user_agent
           }
         }
