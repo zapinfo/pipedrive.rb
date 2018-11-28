@@ -24,6 +24,7 @@ module Pipedrive
       def find_by_id(id)
         make_api_call(:get, id)
       end
+      alias find find_by_id
 
       def find_by_name(*args)
         params = args.extract_options!
