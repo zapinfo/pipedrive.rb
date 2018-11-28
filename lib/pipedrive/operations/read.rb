@@ -24,7 +24,7 @@ module Pipedrive
       def find_by_id(id)
         make_api_call(:get, id)
       end
-      alias find find_by_id
+      alias get_by_id find_by_id
 
       def find_by_name(*args)
         params = args.extract_options!
@@ -34,6 +34,7 @@ module Pipedrive
         return to_enum(:find_by_name, params) unless block_given?
         follow_pagination(:make_api_call, [:get, "find"], params) { |item| yield item }
       end
+      alias get_by_name find_by_name
     end
   end
 end
