@@ -90,3 +90,6 @@ require 'pipedrive/file'
 
 # Notes
 require 'pipedrive/note'
+
+# SearchResults
+require_relative './pipedrive/search_result.rb'
