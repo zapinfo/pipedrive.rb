@@ -4,7 +4,6 @@ module Pipedrive
     include ::Pipedrive::Operations::Create
     include ::Pipedrive::Operations::Update
     include ::Pipedrive::Operations::Delete
-    include ::Pipedrive::Utils
 
     def deals(*args)
       params = args.extract_options!

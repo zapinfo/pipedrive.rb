@@ -93,3 +93,6 @@ require 'pipedrive/note'
 
 # SearchResults
 require_relative './pipedrive/search_result.rb'
+
+# Users
+# require_relative './pipedrive/user.rb'
