@@ -92,7 +92,7 @@ require 'pipedrive/file'
 require 'pipedrive/note'
 
 # SearchResults
-require_relative './pipedrive/search_result.rb'
+require 'pipedrive/search_result'
 
 # Users
-# require_relative './pipedrive/user.rb'
+require 'pipedrive/user'
