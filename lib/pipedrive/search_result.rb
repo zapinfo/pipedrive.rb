@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Pipedrive
   class SearchResult < Base
     include ::Pipedrive::Operations::Create
@@ -10,7 +12,7 @@ module Pipedrive
     end
 
     def field(params = {})
-      make_api_call(:get, "field", params)
+      make_api_call(:get, 'field', params)
     end
   end
 end

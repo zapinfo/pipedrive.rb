@@ -1,9 +1,10 @@
 AllCops:
   Include:
     - '**/Rakefile'
+    - 'lib/**/*'
   Exclude:
     - 'spec/**/*'
-Metrics/LineLength:
+Layout/LineLength:
   Max: 99
 Naming/FileName:
   Enabled: false
@@ -11,7 +12,21 @@ Style/ModuleFunction:
   Enabled: false
 Style/Encoding:
   Enabled: false
-Documentation:
+Style/Documentation:
   Enabled: false
 Metrics/MethodLength:
   Max: 15
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
+Style/ExponentialNotation:
+  Enabled: true
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true

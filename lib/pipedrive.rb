@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'logger'
 require 'active_support/core_ext/hash'
 require 'active_support/concern'
@@ -14,7 +16,7 @@ require 'pipedrive/version'
 
 module Pipedrive
   extend self
-  attr_accessor :api_token, :debug
+  attr_accessor :api_token, :debug, :oauth_credentials
   attr_writer :user_agent, :logger
 
   # ensures the setup only gets run once
@@ -25,6 +27,7 @@ module Pipedrive
     @_ran_once = false
     @user_agent = nil
     @api_token = nil
+    @oauth_credentials = nil
   end
 
   def user_agent
