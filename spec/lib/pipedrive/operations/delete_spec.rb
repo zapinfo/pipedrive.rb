@@ -4,7 +4,7 @@ RSpec.describe ::Pipedrive::Operations::Delete do
   subject do
     Class.new(::Pipedrive::Base) do
       include ::Pipedrive::Operations::Delete
-    end.new('token')
+    end.new(api_token: 'token')
   end
 
   context '#delete' do

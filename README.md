@@ -23,10 +23,23 @@ Or install it yourself as:
 
 ### Person
 
-You need initialize Person client:
+You need initialize Person client with an `api_token` or `oauth_credentials` that you received from the Pipedrive `/oauth/token` endpoint:
 
 ```ruby
-client = ::Pipedrive::Person.new('api_token')
+# If you're using an API token
+client = ::Pipedrive::Person.new(api_token: 'api_token')
+```
+
+or
+
+```ruby
+# If you already have an OAuth access token
+client = ::Pipedrive::Person.new(
+  oauth_credentials: {
+    access_token: 'access_token',
+    api_domain: 'https://compain-subdomain.pipedrive.com'
+  }
+)
 ```
 
 You can get person's JSON data:

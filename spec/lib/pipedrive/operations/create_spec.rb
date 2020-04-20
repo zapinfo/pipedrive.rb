@@ -4,7 +4,7 @@ RSpec.describe ::Pipedrive::Operations::Create do
   subject do
     Class.new(::Pipedrive::Base) do
       include ::Pipedrive::Operations::Create
-    end.new('token')
+    end.new(api_token: 'token')
   end
 
   context '#create' do

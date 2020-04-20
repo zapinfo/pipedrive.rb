@@ -4,7 +4,7 @@ RSpec.describe ::Pipedrive::Operations::Read do
   subject do
     Class.new(::Pipedrive::Base) do
       include ::Pipedrive::Operations::Read
-    end.new('token')
+    end.new(api_token: 'token')
   end
 
   context '#find_by_id' do
